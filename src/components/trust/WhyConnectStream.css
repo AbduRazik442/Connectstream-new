@@ -1,0 +1,703 @@
+/* 
+.why-connectstream {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 6%;
+  background: #f7faf8;
+}
+
+.why-connectstream-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.why-connectstream-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.trust-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #10845a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.why-connectstream-heading h2 {
+  margin: 0;
+  color: #172d22;
+  font-size: clamp(34px, 5vw, 55px);
+  font-weight: 750;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.why-connectstream-heading h2 span {
+  display: block;
+  color: #159568;
+}
+
+.why-connectstream-heading p {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: #77877d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.why-connectstream-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.advantage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 335px;
+  padding: 32px;
+  border: 1px solid #e6eee8;
+  border-radius: 18px;
+  background: #ffffff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-6px);
+  border-color: #c9e9d6;
+  box-shadow: 0 20px 50px rgba(21, 90, 55, 0.08);
+}
+
+.advantage-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.advantage-number {
+  color: #b5c4ba;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.advantage-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #eaf6ee;
+  color: #10845a;
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover .advantage-icon {
+  background: #10845a;
+  color: #ffffff;
+  transform: rotate(-5deg);
+}
+
+.advantage-card h3 {
+  margin: 0 0 13px;
+  color: #1b3025;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.advantage-card > p {
+  max-width: 470px;
+  margin: 0 0 23px;
+  color: #7d8b82;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.advantage-points {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.advantage-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #53665a;
+  font-size: 12px;
+}
+
+.advantage-point svg {
+  flex-shrink: 0;
+  color: #159568;
+}
+
+.advantage-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid #edf1ee;
+  color: #10845a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.why-connectstream-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 35px;
+  padding: 40px 45px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.15), transparent 35%),
+    linear-gradient(120deg, #075e40, #11895b);
+  color: #ffffff;
+}
+
+.why-connectstream-bottom > div > span {
+  color: #a9e9c8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.why-connectstream-bottom h3 {
+  max-width: 600px;
+  margin: 12px 0 0;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+}
+
+.why-connectstream-bottom > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 14px 22px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #087e52;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.why-connectstream-bottom > a:hover {
+  background: #e9f8ee;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 850px) {
+  .why-connectstream {
+    padding: 85px 5%;
+  }
+
+  .advantage-card {
+    padding: 25px;
+  }
+
+  .why-connectstream-bottom {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .why-connectstream {
+    padding: 75px 5%;
+  }
+
+  .why-connectstream-heading {
+    margin-bottom: 40px;
+  }
+
+  .why-connectstream-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .advantage-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .why-connectstream-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .why-connectstream-heading h2 {
+    font-size: 33px;
+  }
+
+  .advantage-card h3 {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .advantage-card,
+  .advantage-icon,
+  .why-connectstream-bottom > a {
+    transition: none;
+  }
+} */
+
+
+.why-connectstream {
+  position: relative;
+  overflow: hidden;
+  padding: 115px 6%;
+  background:
+    radial-gradient(
+      circle at 5% 15%,
+      rgba(32, 175, 111, 0.055),
+      transparent 30%
+    ),
+    #f7faf8;
+}
+
+.why-connectstream-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.why-connectstream-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.trust-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #10845a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.why-connectstream-heading h2 {
+  margin: 0;
+  color: #172d22;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 750;
+  letter-spacing: -2.5px;
+  line-height: 1.12;
+}
+
+.why-connectstream-heading h2 span {
+  display: block;
+  color: #159568;
+}
+
+.why-connectstream-heading p {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: #77877d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* BENTO GRID */
+
+.why-connectstream-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(290px, auto));
+  gap: 20px;
+}
+
+/* ADVANTAGE CARDS */
+
+.advantage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 290px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid #e6eee8;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #1b3025;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(20, 60, 40, 0.025);
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.advantage-card::after {
+  position: absolute;
+  right: -80px;
+  bottom: -100px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(23, 160, 100, 0.055);
+  content: "";
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.advantage-card:hover::after {
+  transform: scale(1.35);
+}
+
+.advantage-card:focus-visible {
+  outline: 3px solid #20a76c;
+  outline-offset: 4px;
+}
+
+.advantage-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.advantage-number {
+  color: #a5b6aa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.advantage-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  background: #eaf6ee;
+  color: #10845a;
+  transition: all 0.3s ease;
+}
+
+.advantage-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #159568;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.advantage-card h3 {
+  margin: 0;
+  color: #1b3025;
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.advantage-short-title {
+  display: block;
+  margin-top: 5px;
+  color: #159568;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.advantage-card > p {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+  margin: 13px 0 18px;
+  color: #7d8b82;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.advantage-expanded {
+  display: grid;
+  gap: 11px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.advantage-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #53665a;
+  font-size: 11px;
+}
+
+.advantage-point svg {
+  flex-shrink: 0;
+  color: #159568;
+}
+
+.advantage-card-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #edf1ee;
+  color: #10845a;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.advantage-arrow {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #edf7f0;
+  transition: transform 0.3s ease;
+}
+
+.advantage-active .advantage-arrow {
+  transform: rotate(45deg);
+}
+
+/* FEATURED CARD */
+
+.advantage-featured {
+  border-color: #075f40;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(91, 227, 157, 0.17),
+      transparent 38%
+    ),
+    linear-gradient(135deg, #073e2d, #087c50);
+  color: white;
+  box-shadow: 0 18px 45px rgba(7, 94, 64, 0.13);
+}
+
+.advantage-featured .advantage-number {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.advantage-featured .advantage-icon {
+  background: rgba(255, 255, 255, 0.13);
+  color: #b8f4d0;
+}
+
+.advantage-featured .advantage-label {
+  color: #9ce8bd;
+}
+
+.advantage-featured h3 {
+  color: white;
+}
+
+.advantage-featured .advantage-short-title {
+  color: #a8edc6;
+}
+
+.advantage-featured > p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.advantage-featured .advantage-point {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.advantage-featured .advantage-point svg {
+  color: #9ce8bd;
+}
+
+.advantage-featured .advantage-card-footer {
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #b7f2ce;
+}
+
+.advantage-featured .advantage-arrow {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+.advantage-featured::after {
+  background: rgba(255, 255, 255, 0.055);
+}
+
+/* CTA BANNER */
+
+.why-connectstream-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 43px 45px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(255, 255, 255, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(120deg, #075e40, #11895b);
+  color: white;
+}
+
+.bottom-cta-content > span {
+  color: #a9e9c8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.bottom-cta-content h3 {
+  max-width: 650px;
+  margin: 13px 0 0;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.8px;
+}
+
+.bottom-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 15px 23px;
+  border-radius: 10px;
+  background: white;
+  color: #087e52;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.bottom-cta-button:hover {
+  background: #e9f8ee;
+  transform: translateY(-3px);
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .why-connectstream {
+    padding: 90px 5%;
+  }
+
+  .why-connectstream-grid {
+    gap: 15px;
+  }
+
+  .advantage-card {
+    padding: 24px;
+  }
+
+  .why-connectstream-bottom {
+    padding: 32px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .why-connectstream {
+    padding: 75px 5%;
+  }
+
+  .why-connectstream-heading {
+    margin-bottom: 40px;
+  }
+
+  .why-connectstream-heading h2 {
+    letter-spacing: -1.5px;
+  }
+
+  .why-connectstream-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  .advantage-card {
+    min-height: 260px;
+    padding: 25px;
+    border-radius: 17px;
+  }
+
+  .advantage-featured {
+    min-height: 290px;
+  }
+
+  .why-connectstream-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 25px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+  .why-connectstream-heading h2 {
+    font-size: 33px;
+  }
+
+  .advantage-card h3 {
+    font-size: 19px;
+  }
+
+  .advantage-card {
+    padding: 21px;
+  }
+
+  .bottom-cta-content h3 {
+    font-size: 23px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .advantage-card,
+  .advantage-card::after,
+  .advantage-icon,
+  .advantage-arrow,
+  .bottom-cta-button {
+    transition: none !important;
+  }
+}

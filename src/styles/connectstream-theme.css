@@ -1,0 +1,134 @@
+:root {
+  /* Official ConnectStream brand colours */
+  --cs-green: #25D366;
+  --cs-teal: #075E54;
+
+  /* Extended creative palette */
+  --cs-forest: #102C28;
+  --cs-forest-deep: #081C19;
+  --cs-ivory: #F6F7F2;
+  --cs-white: #FFFFFF;
+  --cs-mint: #DDF8E7;
+  --cs-muted: #A5B9AF;
+
+  /* Text */
+  --cs-text-dark: #102C28;
+  --cs-text-light: #F6F7F2;
+  --cs-text-muted: #64766F;
+
+  /* Gradients */
+  --cs-gradient: linear-gradient(
+    125deg,
+    #25D366 0%,
+    #12A875 48%,
+    #075E54 100%
+  );
+
+  --cs-hero-gradient: radial-gradient(
+    ellipse at 75% 40%,
+    rgba(37, 211, 102, 0.18),
+    transparent 45%
+  );
+
+  /* Typography */
+  --cs-font-heading: "Mustica Pro", "Inter", sans-serif;
+  --cs-font-body: "Inter", Arial, sans-serif;
+
+  /* Rounded shapes */
+  --cs-radius-sm: 12px;
+  --cs-radius-md: 20px;
+  --cs-radius-lg: 30px;
+  --cs-radius-xl: 42px;
+
+  /* Shadows */
+  --cs-shadow: 0 20px 70px rgba(0, 0, 0, 0.16);
+  --cs-glow: 0 0 50px rgba(37, 211, 102, 0.16);
+
+  /* Animation */
+  --cs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Scoped ConnectStream typography */
+
+.cs-page {
+  font-family: var(--cs-font-body);
+  color: var(--cs-text-dark);
+  overflow: clip;
+}
+
+.cs-page h1,
+.cs-page h2,
+.cs-page h3 {
+  font-family: var(--cs-font-heading);
+  letter-spacing: -0.045em;
+}
+
+.cs-container {
+  width: min(1320px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.cs-gradient-text {
+  background: var(--cs-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 23px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.3s var(--cs-ease),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  cursor: pointer;
+}
+
+.cs-button:hover {
+  transform: translateY(-3px);
+}
+
+.cs-button-primary {
+  background: var(--cs-green);
+  color: var(--cs-forest-deep);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.18);
+}
+
+.cs-button-primary:hover {
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.32);
+}
+
+.cs-button-outline {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: white;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cs-button-outline:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+@media (max-width: 768px) {
+  .cs-container {
+    width: calc(100% - 36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

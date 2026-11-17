@@ -1,0 +1,310 @@
+
+.cs-navbar-wrapper {
+  position: fixed;
+  top: 22px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-inline: 24px;
+}
+
+.cs-navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1240px, 100%);
+  min-height: 76px;
+  margin-inline: auto;
+  padding: 10px 18px 10px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  background: rgba(8, 28, 25, 0.88);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+}
+
+/* BRAND */
+
+.cs-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.cs-brand-symbol {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 13px;
+  color: #081C19;
+  background: var(--cs-green);
+  font-family: var(--cs-font-heading);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.cs-brand-name {
+  font-family: var(--cs-font-heading);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.cs-brand-name span {
+  color: var(--cs-green);
+}
+
+/* DESKTOP LINKS */
+
+.cs-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cs-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  color: rgba(255, 255, 255, 0.78);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.cs-nav-link:hover,
+.cs-nav-link.active {
+  color: var(--cs-green);
+}
+
+.cs-nav-dropdown {
+  position: relative;
+}
+
+.cs-nav-dropdown-trigger svg {
+  transition: transform 0.25s ease;
+}
+
+.cs-nav-dropdown-trigger svg.rotate,
+.cs-mobile-products-trigger svg.rotate {
+  transform: rotate(180deg);
+}
+
+/* PRODUCTS DROPDOWN */
+
+.cs-products-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 420px;
+  padding: 24px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background: #102C28;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.cs-dropdown-heading {
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs-dropdown-heading > span {
+  color: var(--cs-green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.cs-dropdown-heading p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.cs-dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding-block: 16px;
+}
+
+.cs-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 11px 8px;
+  border-radius: 9px;
+  color: #dce9e1;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.cs-dropdown-item svg {
+  flex-shrink: 0;
+  color: var(--cs-green);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cs-dropdown-item:hover {
+  color: var(--cs-green);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.cs-dropdown-item:hover svg {
+  opacity: 1;
+}
+
+.cs-dropdown-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--cs-green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* CTA */
+
+.cs-navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding-inline: 20px;
+  border-radius: 100px;
+  color: #081C19;
+  background: var(--cs-green);
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-navbar-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+/* MOBILE */
+
+.cs-mobile-toggle {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cs-mobile-menu {
+  display: none;
+}
+
+.cs-mobile-products-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  color: white;
+  background: transparent;
+  font-size: 15px;
+  text-align: left;
+}
+
+.cs-mobile-products-trigger svg {
+  transition: transform 0.2s ease;
+}
+
+.cs-mobile-product-list {
+  display: grid;
+  gap: 14px;
+  overflow: hidden;
+  padding: 8px 0 12px 15px;
+}
+
+.cs-mobile-product-list a {
+  color: #a5b9af;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .cs-navbar-wrapper {
+    top: 12px;
+    padding-inline: 14px;
+  }
+
+  .cs-navbar {
+    min-height: 66px;
+    padding: 9px 12px 9px 17px;
+  }
+
+  .cs-navbar-links,
+  .cs-navbar-cta {
+    display: none;
+  }
+
+  .cs-mobile-toggle {
+    display: grid;
+  }
+
+  .cs-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width: min(1240px, 100%);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    margin: 10px auto 0;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    background: #102C28;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .cs-mobile-menu > a,
+  .cs-mobile-menu > button {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .cs-mobile-menu > a:hover,
+  .cs-mobile-product-list a:hover {
+    color: var(--cs-green);
+  }
+
+  .cs-mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    border-radius: 100px;
+    color: #081C19 !important;
+    background: var(--cs-green);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-navbar *,
+  .cs-navbar-wrapper * {
+    transition: none !important;
+  }
+}

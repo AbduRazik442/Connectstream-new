@@ -1,0 +1,448 @@
+
+/* =====================================
+   CONNECTSTREAM PLATFORM OVERVIEW
+===================================== */
+
+.cs-platform-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 115px 0 95px;
+  background: var(--cs-forest-deep);
+  color: #fff;
+}
+
+.cs-platform-background-glow {
+  position: absolute;
+  z-index: -1;
+  top: -280px;
+  right: -160px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.09);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.cs-platform-container {
+  position: relative;
+}
+
+/* INTRO */
+
+.cs-platform-intro {
+  max-width: 720px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.cs-platform-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: #9ccdb0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.cs-platform-eyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cs-green);
+  box-shadow: 0 0 0 5px rgba(37, 211, 102, 0.12);
+}
+
+.cs-platform-intro h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.8px;
+}
+
+.cs-platform-intro h2 span {
+  color: var(--cs-green);
+}
+
+.cs-platform-intro > p {
+  max-width: 570px;
+  margin: 22px auto 0;
+  color: #a9bdb3;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* CATEGORY GRID */
+
+.cs-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.cs-platform-card {
+  position: relative;
+  min-width: 0;
+  padding: 29px 30px 27px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.045);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.cs-platform-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(37, 211, 102, 0.35);
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.cs-platform-card::after {
+  position: absolute;
+  right: -65px;
+  bottom: -90px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.045);
+  content: "";
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.cs-platform-card:hover::after {
+  transform: scale(1.35);
+}
+
+.cs-platform-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.cs-platform-number {
+  color: #78998a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cs-platform-card-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: var(--cs-green);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.cs-platform-card:hover .cs-platform-card-mark {
+  transform: translate(2px, -2px);
+  background: rgba(37, 211, 102, 0.12);
+}
+
+.cs-platform-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.cs-platform-card-description {
+  max-width: 490px;
+  min-height: 58px;
+  margin: 12px 0 24px;
+  color: #9eb1a7;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* FEATURE LIST */
+
+.cs-platform-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.cs-platform-feature {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cs-platform-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(37, 211, 102, 0.12);
+  color: var(--cs-green);
+}
+
+.cs-platform-feature-name {
+  min-width: 0;
+  color: #e2ece6;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.cs-platform-feature-badge {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.cs-badge-beta {
+  background: rgba(255, 190, 90, 0.12);
+  color: #f4c477;
+}
+
+.cs-badge-new {
+  background: rgba(37, 211, 102, 0.14);
+  color: #69e69a;
+}
+
+/* UPCOMING CHANNELS */
+
+.cs-platform-channels {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+  margin-top: 55px;
+  padding: 30px;
+  border: 1px solid rgba(37, 211, 102, 0.19);
+  border-radius: 19px;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(37, 211, 102, 0.09),
+      rgba(255, 255, 255, 0.025)
+    );
+}
+
+.cs-platform-channels-label {
+  color: var(--cs-green);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.cs-platform-channels-copy h3 {
+  margin: 10px 0 8px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+}
+
+.cs-platform-channels-copy p {
+  margin: 0;
+  color: #9eb1a7;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.cs-platform-channel-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cs-platform-channel {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 11px;
+  background: rgba(8, 28, 25, 0.45);
+  color: #e3eee7;
+}
+
+.cs-platform-channel > svg {
+  flex-shrink: 0;
+  color: var(--cs-green);
+}
+
+.cs-platform-channel > span:nth-of-type(1) {
+  min-width: 0;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cs-channel-status {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: #91b69e;
+  font-size: 8px;
+  font-weight: 650;
+}
+
+/* BOTTOM CTA */
+
+.cs-platform-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 36px;
+  padding-top: 27px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.cs-platform-bottom > span {
+  color: #9eb1a7;
+  font-size: 11px;
+}
+
+.cs-platform-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--cs-green);
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.cs-platform-bottom a:hover {
+  gap: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .cs-platform-section {
+    padding: 90px 0 75px;
+  }
+
+  .cs-platform-grid {
+    gap: 13px;
+  }
+
+  .cs-platform-card {
+    padding: 23px 20px;
+  }
+
+  .cs-platform-channels {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-platform-section {
+    padding: 75px 0 65px;
+  }
+
+  .cs-platform-intro {
+    margin-bottom: 40px;
+  }
+
+  .cs-platform-intro h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .cs-platform-intro > p {
+    font-size: 13px;
+  }
+
+  .cs-platform-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .cs-platform-card {
+    padding: 23px 19px;
+  }
+
+  .cs-platform-card-description {
+    min-height: auto;
+  }
+
+  .cs-platform-feature-list {
+    gap: 7px;
+  }
+
+  .cs-platform-feature {
+    gap: 7px;
+    padding: 7px;
+  }
+
+  .cs-platform-feature-name {
+    font-size: 9px;
+  }
+
+  .cs-platform-channels {
+    margin-top: 35px;
+    padding: 22px 17px;
+  }
+
+  .cs-platform-channels-copy h3 {
+    font-size: 19px;
+  }
+
+  .cs-platform-channel-list {
+    gap: 8px;
+  }
+
+  .cs-platform-channel {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .cs-channel-status {
+    width: 100%;
+    margin-left: 27px;
+  }
+
+  .cs-platform-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-platform-card,
+  .cs-platform-card-mark,
+  .cs-platform-card::after,
+  .cs-platform-bottom a {
+    transition: none;
+  }
+}
