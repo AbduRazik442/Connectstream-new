@@ -353,16 +353,16 @@ function Testimonials() {
                 whileHover={{ y: -5 }}
               >
                 <div className="cs-story-card-top">
-                  {/* <div className="cs-story-card-quote-icon">
+                  <div className="cs-story-card-quote-icon">
                     <Quote size={19} />
-                  </div> */}
-                  <div className="cs-story-card-image">
+                  </div>
+                  {/* <div className="cs-story-card-image">
                     <img
                       src={item.image}
                       alt={`${item.name} portrait`}
                       loading="lazy"
                     />
-                  </div>
+                  </div> */}
 
                   <span className="cs-story-index">
                     {item.id}
