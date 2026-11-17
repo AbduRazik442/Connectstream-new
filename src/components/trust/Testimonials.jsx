@@ -216,6 +216,25 @@ const testimonials = [
   },
 ];
 
+const otherTestimonials = [
+  {
+    id: "02",
+    name: "Alex Morgan",
+    role: "Business Owner",
+    initials: "AM",
+    quote: "Managing customer conversations has become much easier for our team.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+  },
+  {
+    id: "03",
+    name: "Sophia Williams",
+    role: "Marketing Director",
+    initials: "SW",
+    quote: "ConnectStream helps us communicate with customers more efficiently.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+  },
+];
+
 const reveal = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
@@ -334,8 +353,15 @@ function Testimonials() {
                 whileHover={{ y: -5 }}
               >
                 <div className="cs-story-card-top">
-                  <div className="cs-story-card-quote-icon">
+                  {/* <div className="cs-story-card-quote-icon">
                     <Quote size={19} />
+                  </div> */}
+                  <div className="cs-story-card-image">
+                    <img
+                      src={item.image}
+                      alt={`${item.name} portrait`}
+                      loading="lazy"
+                    />
                   </div>
 
                   <span className="cs-story-index">
