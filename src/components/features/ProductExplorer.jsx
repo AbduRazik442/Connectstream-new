@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Check } from "lucide-react";
 import FeatureDemo from "./FeatureDemo";
 import "./ProductExplorer.css";
-import { featureGroups } from "./featureData";
+import { featureGroups } from "./FeatureData.js";
 
 function ProductExplorer() {
   const [activeGroup, setActiveGroup] = useState(featureGroups[0]);
