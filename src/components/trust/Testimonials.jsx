@@ -356,13 +356,6 @@ function Testimonials() {
                   <div className="cs-story-card-quote-icon">
                     <Quote size={19} />
                   </div>
-                  {/* <div className="cs-story-card-image">
-                    <img
-                      src={item.image}
-                      alt={`${item.name} portrait`}
-                      loading="lazy"
-                    />
-                  </div> */}
 
                   <span className="cs-story-index">
                     {item.id}
@@ -375,9 +368,16 @@ function Testimonials() {
 
                 <div className="cs-story-card-footer">
                   <div className="cs-story-author">
-                    <div className="cs-story-avatar">
+                    {/* <div className="cs-story-avatar">
                       {item.initials}
-                    </div>
+                    </div> */}
+                    <div className="cs-story-card-image">
+                    <img
+                      src={item.image}
+                      alt={`${item.name} portrait`}
+                      loading="lazy"
+                    />
+                  </div>
 
                     <div>
                       <h4>{item.name}</h4>
